@@ -124,8 +124,5 @@ impl FirebaseClient {
 
 #[tokio::main]
 async fn main() {
-    let mut client = FirebaseClient::new("https://raman-d70bb-default-rtdb.firebaseio.com/".to_string()).unwrap();
-
-    client.put("{\"name\": 1}").await.unwrap();
 
 }
