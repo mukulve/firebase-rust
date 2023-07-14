@@ -5,7 +5,8 @@ Simple wrapper on top of Firebase Realtime Database REST API for rust.
 - [ ] Add auth
 - [ ] Add real time updates
 - [ ] Clean up code
-- [ ] Be able to pass Json object to methods instead of a string json object 
+- [ ] Be able to pass Json object to methods instead of a string json object
+- [x] Add query parameters
 
 # Usage
 
@@ -16,6 +17,8 @@ async fn main() {
     let mut client = FirebaseClient::new("https://dinosaur-facts.firebaseio.com/".to_string()).unwrap();
 
     client.set_location("location1").unwrap().set_location("location1").unwrap();
+
+    client.order_by("\"price\"").unwrap().limit_to_first("10").unwrap();
   
     client.get().await.unwrap();
   
