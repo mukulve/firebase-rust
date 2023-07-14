@@ -183,7 +183,7 @@ impl FirebaseClient {
 
         match res {
             Ok(_) => return Ok(self),
-            Err(_) => return Err("Unable To Put Data"),
+            Err(_) => return Err("Unable To Post Data"),
         }
     }
 
@@ -200,7 +200,7 @@ impl FirebaseClient {
 
         match res {
             Ok(_) => return Ok(self),
-            Err(_) => return Err("Unable To Put Data"),
+            Err(_) => return Err("Unable To Patch Data"),
         }
     }
 
@@ -214,9 +214,10 @@ impl FirebaseClient {
 
         match res {
             Ok(_) => return Ok(self),
-            Err(_) => return Err("Unable To Put Data"),
+            Err(_) => return Err("Unable To Delete Data"),
         }
     }
 }
 
-
+#[tokio::main]
+async fn main() {}
